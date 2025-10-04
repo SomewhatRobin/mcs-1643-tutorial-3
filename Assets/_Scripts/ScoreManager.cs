@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
+    public TextMeshProUGUI scoreText;
     private int score;
 
 
@@ -16,7 +18,7 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        scoreText.text = score.ToString();
     }
 
     public void AddScore(int points)
