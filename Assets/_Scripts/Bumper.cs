@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bumper : MonoBehaviour
 {
     public float bumpForce = 2.0f;
+    public int points = 100;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -21,6 +22,7 @@ public class Bumper : MonoBehaviour
 
             Rigidbody rb = collision.rigidbody;
             rb.AddForce(forceVector * bumpForce, ForceMode.Impulse);
+            ScoreManager.AddScore(points);
 
 
         }

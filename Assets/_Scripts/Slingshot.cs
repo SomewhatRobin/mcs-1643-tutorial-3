@@ -5,6 +5,7 @@ using UnityEngine;
 public class Slingshot : MonoBehaviour
 {
     public float bumpForce = 2.0f;
+    public int points = 150;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -12,7 +13,7 @@ public class Slingshot : MonoBehaviour
         {
             Rigidbody rb = collision.rigidbody;
             rb.AddForce(transform.forward * bumpForce, ForceMode.Impulse);
-
+            ScoreManager.AddScore(points);
 
         }
     }
