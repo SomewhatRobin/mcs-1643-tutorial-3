@@ -7,7 +7,22 @@ public class GameManager : MonoBehaviour
     public int lives = 3;
     public GameObject ballPrefab;
     public Transform ballStart;
+    /*
+       // Debug Quick Respawn Button 
+       public KeyCode keyToPress;
+       public GameObject curBall;
 
+       void Update()
+       {
+           if (Input.GetKeyDown(keyToPress))
+           {
+               curBall = GameObject.FindWithTag("PlayerBall");
+               Destroy(curBall.gameObject);
+
+               Instantiate(ballPrefab, ballStart.position, Quaternion.identity);
+           }
+       }
+    */
     public void EndBall()
     {
         lives--;
