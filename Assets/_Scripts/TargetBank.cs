@@ -7,9 +7,18 @@ public class TargetBank : MonoBehaviour
     public int points = 500;
 
     public GameObject[] targets;
+    public float timeToReset = 0.1f;
+
+
+    private bool waitingToReset = false;
 
     private void Update()
     {
+        if (waitingToReset)
+        {
+            return;
+        }
+
         bool allDown = true;
         foreach (GameObject target in targets)
         {
@@ -22,14 +31,21 @@ public class TargetBank : MonoBehaviour
 
         if (allDown)
         {
-            ScoreManager.AddScore(points);
-            foreach (GameObject target in targets)
-            {
-                target.SetActive(true);
-            }
 
+            waitingToReset = true;
+            ScoreManager.AddScore(points);
+            Invoke("ResetTargets", timeToReset);
+            
         }
 
     }
 
+    private void ResetTargets()
+    {
+        foreach (GameObject target in targets)
+        {
+            target.SetActive(true);
+            waitingToReset = false;
+        }
+    }
 }
