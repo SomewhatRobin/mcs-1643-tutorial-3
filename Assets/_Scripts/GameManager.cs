@@ -7,6 +7,14 @@ public class GameManager : MonoBehaviour
     public int lives = 3;
     public GameObject ballPrefab;
     public Transform ballStart;
+    public GameObject gameOverPanel;
+
+        public void Start()
+    {
+
+        gameOverPanel.SetActive(false);
+
+    }
     /*
        // Debug Quick Respawn Button 
        public KeyCode keyToPress;
@@ -29,6 +37,7 @@ public class GameManager : MonoBehaviour
         if (lives == 0)
         {
             //show the game over
+            gameOverPanel.SetActive(true);
         }
         else
         {
