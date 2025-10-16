@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
         gameOverPanel.SetActive(false);
 
     }
-    /*
+    
        // Debug Quick Respawn Button 
        public KeyCode keyToPress;
        public GameObject curBall;
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
                Instantiate(ballPrefab, ballStart.position, Quaternion.identity);
            }
        }
-    */
+  
     public void EndBall()
     {
         lives--;

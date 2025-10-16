@@ -12,7 +12,7 @@ public class Slingshot : MonoBehaviour
         if (collision.transform.CompareTag("PlayerBall"))
         {
             Rigidbody rb = collision.rigidbody;
-            rb.AddForce(transform.forward * bumpForce, ForceMode.Impulse);
+            rb.AddForce(transform.right * bumpForce, ForceMode.Impulse);
             ScoreManager.AddScore(points);
 
         }
