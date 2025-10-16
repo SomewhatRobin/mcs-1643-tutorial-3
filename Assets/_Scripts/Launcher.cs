@@ -10,6 +10,14 @@ public class Launcher : MonoBehaviour
 
     private Rigidbody rb;
     public float secondsHeld = 0f;
+    private AudioSource audioSrc;
+
+
+    void Start()
+    { 
+        audioSrc = GetComponentInChildren<AudioSource>(); 
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -29,6 +37,7 @@ public class Launcher : MonoBehaviour
 
             if (rb != null)
             {
+                audioSrc.Play();
                 rb.AddForce(transform.up * launchForce * timePct);
             }
             

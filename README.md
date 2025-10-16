@@ -1,16 +1,25 @@
 #### MCS 1643 README file
-# **Replace this Project Name**
+# **Bebop Ball**
 
-#### Author: *Replace this with your name*
+#### Author: *Jacob Robinson*
 
-##### Modified: *2024-09-06*
+##### Modified: *2024-10-16*
 
 <br>
 
 #### Questions for tutorial assignments: (remove this section for projects)
 **Which tutorial is this? **
+This is tutorial 3: Pinball
 
 **1. Did you make any additions beyond the tutorial requirements? If so, what?**
+I've added a lane inspired by this Blade themed Pinball FX3 board I found on Youtube [https://www.youtube.com/watch?v=lswyEqDfWCc  - 43 seconds in]
+This is simplified as playing a "Chicken" minigame for bonus points, all or nothing.
+As the ball rolls further down the left lane, it racks up *Ante* that can be cashed out by successfully pushing the ball into the right lane, 
+using pistons that shoot from the gates.
+The higher the *Ante*, the more points will be gained, but the *Ante* resets about 4.5 seconds after activating, so it'll be gone by the time you can get back to the lane.
+
+**===To activate the pistons, Press 'D' on the keyboard. This has a cooldown of about 2.5 seconds===**
+
 > &nbsp;
 ><i>(let me know what to look for, any additional keys to use, etc.)</i>   
 > &nbsp;
@@ -20,70 +29,21 @@
 ><i>(If something in your assignment doesn't work or you think part of the tutorial can be improved, explain here)</i>   
 > &nbsp;
 
-#### Questions for projects: (remove this section for tutorial assignments)
-**1. What are the controls to your game? How do we play?**   
+Getting the board set up using ProBuilder, and having built it to fit the pinball, I was a bit miffed to find out that the ball was barely visible when I ported it over.
+That took time to fix.
+I also had trouble with knowing what to look out for after I started removing parts of the arch. It gave me a warning.
+Also found a CoACD script to get rigidbodys for pistons+Bumpers+Flippers made in ProBuilder.
 
-> &nbsp;
-><i>(art, music, etc. Just tell us where you got it, link it here)</i>   
-> &nbsp;
- 
-
-
-**2. What creative additions/enhancements did you make? How can we find them?**   
-
-> &nbsp;
-><i>(If you don't tell us how to experience them, we could easily miss them.)</i>   
-> &nbsp;
- 
-
-
-**3. Any assets used that you didn't create yourself?**   
-
-> &nbsp;
-><i>(art, music, etc. Just tell us where you got it, link it here)</i>   
-> &nbsp;
- 
-
-
-**4. Did you receive help from anyone outside this class or from anyone in this class that is not in a group with you?**   
-
-> &nbsp;
-><i>(list their names and what they helped with)</i>   
-> &nbsp;
- 
-
-
-**5. Did you get help from any AI Code Assistants?**   
-
-> &nbsp;
-><i>(Including things like Chat-GPT, Copilot, etc. Tell us which .cs file to look in for the citation and describe what you learned)</i>   
-> &nbsp;
- 
-
-
-**6. Did you get help from any online websites, videos, or tutorials?**   
-
-> &nbsp;
-><i>(link them here)</i>   
-> &nbsp;
- 
-
-
-**7. What trouble did you have with this project?**   
-
-> &nbsp;
-><i>(Even if you didn't complete the project, you can still get partial credit if you tell us about why it's incomplete.)</i>   
-> &nbsp;
- 
-
-
-**8. Is there anything else we should know?**   
-
-> &nbsp;
->*No answer given.*
-> &nbsp;
 
 ---
+
+**Music used: All That - Benjamin Tissot
+
+Music I Use: Bensound.com/royalty-free-music
+License code: GXRFUT3WEVG3BLZA
+Artist: : Benjamin Tissot
+
+
 
 # This starter is based on Jeremy Gibson Bond's MI 231 Starter, https://github.com/MSU-mi231/Unity-3D-Template-2022.3
 # (which in turn incorporates some collaborative work and suggestions from me)

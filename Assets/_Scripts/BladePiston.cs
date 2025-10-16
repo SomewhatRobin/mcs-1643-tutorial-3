@@ -10,11 +10,13 @@ public class BladePiston : MonoBehaviour
  
     public KeyCode keyToPress;
     private bool justUsed = false;
-   
+    private AudioSource audioSrc;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSrc = GetComponentInChildren<AudioSource>();
         rb = GetComponent<Rigidbody>();
         transform.position = new Vector3 (startPos.transform.position.x, startPos.transform.position.y, startPos.transform.position.z);
 
@@ -27,7 +29,7 @@ public class BladePiston : MonoBehaviour
     {
         if (Input.GetKeyDown(keyToPress) && !justUsed)
         {
-
+            audioSrc.Play();
             rb.AddForce(transform.right * speed, ForceMode.Impulse);
             justUsed = true;
             Invoke(nameof(ResetPos), 1.2f);
