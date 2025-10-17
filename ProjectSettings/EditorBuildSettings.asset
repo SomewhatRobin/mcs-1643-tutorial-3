@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/WaWaWeePinball.unity
+    guid: b1e3a317029fc56499401c0a565478d6
   m_configObjects: {}
